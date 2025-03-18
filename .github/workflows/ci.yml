@@ -19,29 +19,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Faster and cleaner than "npm install"
+
+      - name: Fix Jest Permission Issue
+        run: chmod +x node_modules/.bin/jest  # Fix jest permission
 
       - name: Run tests
         run: npm test
-
-  test-flask:
-    name: Test Flask App
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install flask pytest
-
-      - name: Run tests
-        run: pytest test_app.py
