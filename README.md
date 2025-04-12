@@ -1,6 +1,6 @@
 # Basic CI/CD Setup with GitHub Actions for Node.js and Flask Apps
 
-## 📝 Introduction
+## Introduction
 
 In the world of modern software development, **speed** and **reliability** are everything. Manual testing and deployment can be error-prone and time-consuming. That’s where **CI/CD (Continuous Integration and Continuous Deployment)** comes in.
 
@@ -12,7 +12,7 @@ In this documentation, you'll learn how to set up a basic **CI pipeline using Gi
 -  If any test fails, the workflow **stops**, preventing bad code from being merged or deployed.
 
 ## Workflow Diagram:
-  ![Diagram](images/files.png)
+  ![Diagram](images/Basic_CICD.svg)
 
 This guide walks you through:
 - Setting up a basic Node.js app
