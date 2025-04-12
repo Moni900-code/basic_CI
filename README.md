@@ -1,17 +1,31 @@
 # Basic CI/CD Setup with GitHub Actions for Node.js and Flask Apps
 
-This documentation shows how to set up **Continuous Integration (CI)** using **GitHub Actions** for both **Node.js** and **Flask** applications. Every time you `push` or open a `pull request`, tests will run automatically to ensure your application is working correctly  before merging or deploying.
-The workflow is: 
+## 📝 Introduction
 
-<img src="images/archi.png" alt="Alt Text" width="300" hight="10" />
+In the world of modern software development, **speed** and **reliability** are everything. Manual testing and deployment can be error-prone and time-consuming. That’s where **CI/CD (Continuous Integration and Continuous Deployment)** comes in.
 
+**CI/CD** automates the entire software delivery process — from running tests on every code change to deploying it when everything looks good. This ensures that bugs are caught early, code remains stable, and updates are delivered faster.
 
----
+In this documentation, you'll learn how to set up a basic **CI pipeline using GitHub Actions** for **Node.js** application. With this setup:
+
+-  Every push to your GitHub repository will **automatically trigger test cases**.
+-  If any test fails, the workflow **stops**, preventing bad code from being merged or deployed.
+
+## Workflow Diagram:
+  ![Diagram](images/files.png)
+
+This guide walks you through:
+- Setting up a basic Node.js app
+- Writing tests using Jest
+- Creating a CI workflow file
+- Testing the flow on GitHub
+- Viewing outputs for both success and failure scenarios
+
+Let’s get started and make your development process smoother and smarter with automation! 
 
 ## 1. Create Node.js Application
 
 ### 📌 Node.js App Setup
-
 
 ```bash
 mkdir basic_CI && cd basic_CI
@@ -23,7 +37,7 @@ Now, create some basic files:
 2. server.js (Running the Server)
 3. Test.js
 
-![Alt Text](images\files.png)
+![Alt Text](images/files.png)
 
 And add the test script in package.json file as like this:
 
