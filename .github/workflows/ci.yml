@@ -26,3 +26,6 @@ jobs:
 
       - name: Run tests
         run: npm test
+        
+      - name: Test Docker Run
+        run: docker run hello-Docker-Container
