@@ -28,4 +28,4 @@ jobs:
         run: npm test
         
       - name: Test Docker Run
-        run: docker run hello-Docker-Container
+        run: docker run hello-docker-container
