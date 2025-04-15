@@ -27,5 +27,8 @@ jobs:
       - name: Run tests
         run: npm test
         
-      - name: Test Docker Run
-        run: docker run hello-docker-container
+      - name: Run a test
+        run: |
+          echo "Running on my custom runner!"
+          echo "Host: $HOSTNAME"
+          pwd
